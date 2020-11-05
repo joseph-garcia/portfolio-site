@@ -5,4 +5,7 @@ class Blog < ApplicationRecord
 
   # validations
   validates_presence_of :title, :body
+
+  # blogs is owned by topics
+  belongs_to :topic
 end
