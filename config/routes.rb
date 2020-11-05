@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
-  resources :portfolio_pieces, except: [:show, :index]
+  resources :portfolio_pieces, except: [:show, :index, :new]
+  get 'java-items', to: 'portfolio_pieces#java'
   get 'project/:id', to: 'portfolio_pieces#show', as: 'portfolio_pieces_show'
   get 'projects', to: 'portfolio_pieces#index'
+  get 'projects/new', to: 'portfolio_pieces#new', as: 'new_portfolio_piece'
 
   get 'pages/home'
 

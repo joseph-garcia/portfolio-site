@@ -3,6 +3,10 @@ class PortfolioPiecesController < ApplicationController
     @portfolio_items = PortfolioPiece.all
   end
 
+  def java
+    @java_items = PortfolioPiece.java 
+  end
+
   def new
     @portfolio_item = PortfolioPiece.new
   end
@@ -16,7 +20,7 @@ class PortfolioPiecesController < ApplicationController
 
     respond_to do |format|
       if @portfolio_item.save
-        format.html { redirect_to portfolio_pieces_path, notice: 'Project piece was successfully created.' }
+        format.html { redirect_to projects_path, notice: 'Project piece was successfully created.' }
       else
         format.html { render :new }
       end
