@@ -38,6 +38,20 @@ class PortfolioPiecesController < ApplicationController
     end
   end
 
+  def destroy
+    # Perform the lookup
+    @portfolio_item = PortfolioPiece.find(params[:id])
+
+    # Destroy/delete the record
+    @portfolio_item.destroy
+
+    # Redirect
+    respond_to do |format|
+      format.html { redirect_to portfolio_pieces_path, notice: "Project was removed."}
+    end
+    
+  end
+
   def blog_params
     params.require(:portfolio_piece).permit(:title, :subtitle, :body)
   end
