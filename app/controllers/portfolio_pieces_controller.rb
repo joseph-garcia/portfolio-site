@@ -6,6 +6,10 @@ class PortfolioPiecesController < ApplicationController
   def new
     @portfolio_item = PortfolioPiece.new
   end
+  
+  def show
+    @portfolio_item = PortfolioPiece.find(params[:id])
+  end
 
   def create
     @portfolio_item = PortfolioPiece.new(blog_params)
