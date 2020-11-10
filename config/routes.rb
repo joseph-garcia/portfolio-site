@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :portfolio_pieces, except: [:show, :index, :new]
   get 'java-items', to: 'portfolio_pieces#java'
   get 'project/:id', to: 'portfolio_pieces#show', as: 'portfolio_pieces_show'
