@@ -1,3 +1,10 @@
 class ApplicationController < ActionController::Base
   included DeviseWhitelist
+
+  # know where user came from
+  before_action :set_source
+
+  def set_source
+    session[:source] = params[:q] if params[:q]
+  end
 end
