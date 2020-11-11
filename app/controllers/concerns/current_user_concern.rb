@@ -1,5 +1,5 @@
 module CurrentUserConcern
-  extend ActiveSuport::Concern
+  extend ActiveSupport::Concern
   
   # if current user exists, do super. if not, do || item
   # ostruct is a mini database structure object
