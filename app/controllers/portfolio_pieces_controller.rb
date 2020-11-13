@@ -1,5 +1,7 @@
 class PortfolioPiecesController < ApplicationController
   layout 'project'
+  access all: [:show, :index, :java], user: {except: [:destroy, :new, :create, :update, :edit]}, site_admin: :all
+
   def index
     @portfolio_items = PortfolioPiece.all
   end

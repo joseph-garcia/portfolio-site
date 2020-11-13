@@ -50,3 +50,4 @@ gem 'devise', '~> 4.7', '>= 4.7.3'
 
 gem 'bootstrap', '~> 4.5.3'
 gem 'jquery-rails'
+gem 'petergate', '~> 2.0', '>= 2.0.1'
