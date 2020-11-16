@@ -28,10 +28,11 @@
 
       <%= render "shared/application_nav" %>
 
-      <!-- from application_helper.rb -->
-      <%= login_helper %>
+      
 
       <%= yield %>
+
+      <%= render "shared/application_footer" %>
 
       <%= source_helper("application") %>
 
