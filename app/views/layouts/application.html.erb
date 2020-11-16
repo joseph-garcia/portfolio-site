@@ -21,20 +21,20 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class="text-center">
     <!-- Bootstrap body -->
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+      
 
-    <!--------------------->
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+      <%= render "shared/application_nav" %>
 
-    <%= render "shared/nav", location: 'top' %>
+      <!-- from application_helper.rb -->
+      <%= login_helper %>
 
-    <!-- from application_helper.rb -->
-    <%= login_helper %>
+      <%= yield %>
 
-    <%= yield %>
+      <%= source_helper("application") %>
 
-    <%= source_helper("application") %>
+    </div>
   </body>
 </html>
