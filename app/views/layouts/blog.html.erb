@@ -50,13 +50,14 @@
     </div>
   </div>
 
+  <%= link_to 'New Blog', new_blog_path if logged_in?(:site_admin) %>
 
 
   <div class="container">
     <div class="row">
 
-      <%= login_helper %>
-
+      
+      
       <%= yield %>
 
       <!-- side bar  -->
@@ -94,6 +95,7 @@
         </div>
       </aside>
       <!-- /.blog-sidebar -->
+  </div>
 
       <!-- footer -->
       <footer class="blog-footer">
@@ -104,12 +106,10 @@
       </footer>
       <!-- /footer -->
 
-      <%= render "shared/nav", location: 'bottom' %>
-
       <%= source_helper("blog") %>
 
     </div>
-  </div>
+  
 </body>
 
 </html>
