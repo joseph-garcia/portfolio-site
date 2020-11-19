@@ -3,7 +3,7 @@ class PortfolioPiecesController < ApplicationController
   access all: [:show, :index, :java], user: {except: [:destroy, :new, :create, :update, :edit]}, site_admin: :all
 
   def index
-    @portfolio_items = PortfolioPiece.all
+    @portfolio_items = PortfolioPiece.by_position
   end
 
   def java

@@ -7,6 +7,10 @@ class PortfolioPiece < ApplicationRecord
   include Placeholder
   validates_presence_of :title, :body, :main_image, :thumb_image
 
+  def self.by_position
+    order("position ASC")
+  end
+
   def self.java
     where(subtitle: "Java")
   end
