@@ -5,15 +5,23 @@
 
 import 'bootstrap'
 import './src/application.scss'
+import 'jquery-ui'
+
+import 'jquery-ui'
+ 
+$(
+        () => {
+                $('.sortable').sortable()
+        }
+)
 
 require("@rails/ujs").start()
-require ("packs/html.sortable")
+require("packs/html.sortable")
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 
 //= require jquery3
-//= require jquery-ui
 //= require popper
 //= require bootstrap-sprockets
 
