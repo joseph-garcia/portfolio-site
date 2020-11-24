@@ -8,6 +8,23 @@
     <div class="row">
       <div class="col-md-4">
         <%= image_tag "pupper.jpeg", width: 280, alt: "Picture of a bridge", class: 'profile-img' %>
+
+        <div class="skills">
+          <% @skills.each do |skill| %>
+          <div class="skill">
+            <h4><%= skill.title %></h4>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped bg-warning" 
+                    role="progressbar" 
+                    area-valuenow="<%= skill.percent %>" 
+                    aria-valuemax="100" 
+                    style="width: <%= skill.percent %>%">
+              </div>
+            </div>
+          </div>
+
+          <% end %>
+        </div>
       </div>
 
       <div class="col-md-8">
@@ -19,6 +36,37 @@
           nulla pariatur. Excepteur sint occaecat cupidatat non proident,
           sunt in culpa qui officia deserunt mollit anim id est laborum.
         </p>
+
+
+        <p>
+          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#moreInfo" aria-expanded="false" aria-controller="moreInfo">
+            More Info
+          </button>
+
+          <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#education" aria-expanded="false" aria-controller="education">
+            Education
+          </button>
+        </p>
+
+        <p>
+        <div class="collapse" id="moreInfo">
+          <div class="card card-block">
+            More Info 1:
+          </div>
+          <div class="card card-block">
+            More Info 2:
+          </div>
+        </div>
+
+        <div class="collapse" id="education">
+          <div class="card card-block">
+            More Info 1:
+          </div>
+          <div class="card card-block">
+            More Info 2:
+          </div>
+        </div>
+
       </div>
 
     </div>
