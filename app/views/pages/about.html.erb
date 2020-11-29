@@ -2,19 +2,19 @@
   <div class="card">
 
 
-    <h1>Pages#about</h1>
-    <p>Find me in app/views/pages/about.html.erb</p>
+    <h1>About</h1>
+    <p>Software Developer</p>
 
     <div class="row">
       <div class="col-md-4">
-        <%= image_tag "pupper.jpeg", width: 280, alt: "Picture of a bridge", class: 'profile-img' %>
+        <%= image_tag "mepic.png", width: 280, alt: "Picture of a bridge", class: 'profile-img' %>
 
         <div class="skills">
           <% @skills.each do |skill| %>
           <div class="skill">
             <h4><%= skill.title %></h4>
             <div class="progress">
-              <div class="progress-bar progress-bar-striped bg-warning" 
+              <div class="progress-bar progress-bar-striped progress-color" 
                     role="progressbar" 
                     area-valuenow="<%= skill.percent %>" 
                     aria-valuemax="100" 
@@ -28,13 +28,27 @@
       </div>
 
       <div class="col-md-8">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
-          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-          in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-          nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-          sunt in culpa qui officia deserunt mollit anim id est laborum.
+        <p class="about-summary">I’m a fellow computer geek, and I really enjoy learning technologies at a deep level. 
+        This past year, I’ve delved into the rabbit hole of Android Studio with Kotlin, web development with 
+        JavaScript frameworks and Unity with C#. But I’ve learned many technologies throughout my life, 
+        from graphic design, video-editing and VFX as a teenager, to 3D game tech and programming in college. 
+        Coming across problems and thoroughly learning new tech to deal with them gave me the sort of savvy 
+        flexibility to solve any issue thrown at me.
+        <br><br>
+        I thrive when collaborating in small teams, as well. While at university, 
+        I worked in groups in many roles like tech artist in our game development capstone course, 
+        gameplay programmer for a 1-month rapid development prototype project in a scripting course, 
+        and a 3d modeler for a VR application that helps young students learn fractions in a more 
+        interactive way. Putting minds together, working in unison and coming out with a cohesive product 
+        that was once just an abstract idea is an immensely rewarding experience to me.
+        <br><br>
+        During a hackathon in Austin, I was a co-designer for a web app that helps users sort their 
+        waste between landfill, recycling, and compost. My team traveled downtown to interview small 
+        shop owners about it, and it was inspiring to hear how many of them would’ve loved an app 
+        interface like it in their store in the name of helping the environment. It’s an awesome 
+        feeling when something I create can help people out. It’s the reason I like technology 
+        so much--it has an amazing power to bring new applications to people’s fingertips to accomplish 
+        exactly what they need at a fraction of the time. 
         </p>
 
 

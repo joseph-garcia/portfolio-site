@@ -17,7 +17,7 @@ puts "3 Topics created"
 10.times do |blog|
   Blog.create!(
     title: "Blog ##{blog}",
-    body: "Trysail Sail ho Corsair red ensign hulk smartly boom jib rum gangway. Case shot Shiver me timbers gangplank crack Jennys tea cup ballast Blimey lee snow crow's nest rutters. Fluke jib scourge of the seven seas boatswain schooner gaff booty Jack Tar transom spirits.",
+    body: "#Trysail Sail ho Corsair red ensign hulk smartly boom jib rum gangway. Case shot Shiver me timbers gangplank crack Jennys tea **cup** ballast Blimey lee snow crow's nest rutters. Fluke jib scourge of the seven seas boatswain schooner gaff booty Jack Tar transom spirits.",
     topic_id: Topic.last.id
   )
 end
@@ -62,3 +62,7 @@ puts "1 Java Portfolio items created"
 end
 
 puts "3 Technologies created"
+
+
+auser = User.create!(email: "billyg@test.com", password: "billyg", name: "Billy G")
+auser.update!(role: :site_admin)

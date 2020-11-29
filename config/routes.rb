@@ -14,7 +14,8 @@ Rails.application.routes.draw do
   get 'about', to: 'pages#about' # visit via url/about
   get 'contact', to: 'pages#contact'
 
-  
+  #redict blog to posts as well
+  resources :blogs, :path => "posts"
 
   resources :blogs do
     member do

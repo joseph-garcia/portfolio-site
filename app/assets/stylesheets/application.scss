@@ -36,6 +36,18 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+p {
+  color: white;
+}
+
+h3 {
+  color: white;
+}
+
+h1 {
+  color: black;
+}
+
 body {
   display: -ms-flexbox;
   display: -webkit-box;
@@ -59,6 +71,10 @@ font-family: 'Lato', sans-serif;
 
 .cover-container {
   max-width: 55em;
+}
+
+.cover-heading {
+  color: white;
 }
 
 
@@ -177,6 +193,10 @@ font-family: 'Lato', sans-serif;
    text-align: left;
  }
 
+ .card > p {
+   color: black;
+ }
+
  .app-card-container > .card {
    padding: 10px;
  }
@@ -194,4 +214,12 @@ font-family: 'Lato', sans-serif;
  .skill {
    margin-top: 10px;
    margin-bottom: 10px;
+ }
+
+ .about-summary {
+   color: black;
+ }
+
+ .progress-bar {
+   background-color: #333 !important;
  }
