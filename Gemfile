@@ -58,3 +58,5 @@ gem 'coffee-rails', '~> 5.0'
 gem 'cocoon', '~> 1.2', '>= 1.2.15'
 gem 'redcarpet', '~> 3.3', '>= 3.3.4'
 gem 'coderay', '~> 1.1', '>= 1.1.3'
+
+ruby "2.7.1"
