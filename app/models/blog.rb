@@ -4,7 +4,7 @@ class Blog < ApplicationRecord
   friendly_id :title, use: :slugged
 
   # validations
-  validates_presence_of :title, :body, :topic_id
+  validates_presence_of :title, :body, :topic_id, :snippet
 
   # blogs is owned by topics
   belongs_to :topic
