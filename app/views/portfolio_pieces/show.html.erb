@@ -1,7 +1,8 @@
+<div class="album py-5"></div>
 <div class="container">
   <div class="row">
     <div class="col-md-7">
-      <%= image_tag @portfolio_item.main_image %>
+      <%= image_tag @portfolio_item.main_image, class: "project-image" %>
     </div>
     <div class="col-md-5">
       <h1><%= @portfolio_item.title %></h1>
@@ -11,6 +12,9 @@
       <em><%= @portfolio_item.subtitle %></em>
 
       <p><%= @portfolio_item.body %></p>
+
+      <%= link_to "Visit", @portfolio_item.visit_link, class: "btn btn-secondary", target: :_blank if !@portfolio_item.visit_link.nil? %>
+      <%= link_to "Code", @portfolio_item.code_link, class: "btn btn-secondary", target: :_blank if !@portfolio_item.code_link.nil?  %>
 
       <hr>
 
@@ -29,3 +33,4 @@
     </div>
   </div>
 </div>
+
