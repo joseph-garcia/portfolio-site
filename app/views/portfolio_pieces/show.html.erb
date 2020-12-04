@@ -1,10 +1,11 @@
 <div class="album py-5"></div>
-<div class="container">
-  <div class="row">
-    <div class="col-md-7">
+
+<div class="container card mb-4 box-shadow">
+  <div class="row card-body">
+    <div class="col-md-7 padding">
       <%= image_tag @portfolio_item.main_image, class: "project-image" %>
     </div>
-    <div class="col-md-5">
+    <div class="col-md-5 padding">
       <h1><%= @portfolio_item.title %></h1>
 
       <hr>
@@ -20,8 +21,13 @@
 
       <h3>Technologies used</h3>
 
-      <% @portfolio_item.technologies.each do |t| %>
-      <p><%= t.name %></p>
+      <% @portfolio_item.technologies.each_with_index do |t, idx| %>
+      
+        <% if idx != @portfolio_item.technologies.size - 1%>
+          <span><%= t.name %>, </span>
+        <% else %>
+          <span><%= t.name %></span>
+        <% end %>
       <% end %>
 
       <% if logged_in?(:site_admin) %>
